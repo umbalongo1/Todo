@@ -1,0 +1,31 @@
+
+
+    // Sample code for adding a task in a to-do list
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Todo {
+    public static void main(String[] args) {
+        ArrayList<String> tasks = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+       // System.out.println("Welcome to the To-Do List Application!");
+
+        while (true) {
+     //       System.out.print("Enter a task (or type 'exit' to quit): ");
+            String input = scanner.nextLine();
+
+            if (input.equalsIgnoreCase("exit")) {
+                break;
+            }
+
+            tasks.add(input);
+    //        System.out.println("Task added!");
+        }
+
+    //    System.out.println("Your To-Do List:");
+        for (String task : tasks) {
+            System.out.println(task);
+        }
+    }
+}
